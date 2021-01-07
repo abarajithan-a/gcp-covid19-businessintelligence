@@ -23,3 +23,30 @@ PARTITION BY
 	TIMESTAMP_TRUNC(cases_timestamp, DAY)
 CLUSTER BY
 	country, state, city;
+
+CREATE OR REPLACE TABLE abar_bq_dataset_covid19_raw.world_cities_raw
+(
+	city STRING,
+	city_ascii STRING,
+	lat STRING,
+	lng STRING,
+	country STRING,
+	iso2 STRING,
+	iso3 STRING,
+	admin_name STRING,
+	capital STRING,
+	population STRING,
+	id STRING
+)
+CLUSTER BY
+	country, admin_name, city;
+
+CREATE OR REPLACE TABLE abar_bq_dataset_covid19_raw.countries_lat_long_raw
+(
+	country STRING,
+	lat STRING,
+	lng STRING,
+	name STRING
+)
+CLUSTER BY
+	country;
