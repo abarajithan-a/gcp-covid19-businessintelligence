@@ -14,3 +14,23 @@ CREATE OR REPLACE TABLE abar_bq_dataset_covid19_dw_bi.region_dim
 )
 CLUSTER BY
 	country, state_province, city;
+
+CREATE OR REPLACE TABLE abar_bq_dataset_covid19_dw_bi.date_dim
+(
+	calendar_timestamp TIMESTAMP,
+	calendar_date DATE,
+	year_timestamp TIMESTAMP,	
+	year_number INT64,
+	quarter_timestamp TIMESTAMP,	
+	quarter_number INT64,
+	quarter_string STRING,	
+	month_timestamp TIMESTAMP,	
+	month_number INT64,
+	week_timestamp TIMESTAMP,	
+	week_number INT64,
+	day_number INT64
+)
+PARTITION BY
+	TIMESTAMP_TRUNC(calendar_timestamp, DAY)
+CLUSTER BY
+	quarter_timestamp, month_timestamp, week_timestamp, calendar_date;
