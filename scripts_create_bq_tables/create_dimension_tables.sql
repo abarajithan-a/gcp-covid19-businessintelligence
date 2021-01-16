@@ -1,19 +1,25 @@
 CREATE OR REPLACE TABLE abar_bq_dataset_covid19_dw_bi.region_dim
 (
+	fingerprint INT64,
 	city STRING,
-	lat_city FLOAT64,
-	lng_city FLOAT64,
+	city_lat FLOAT64,
+	city_lng FLOAT64,
+	city_population INT64,	
 	country STRING,
 	country_code_iso2 STRING,
 	country_code_iso3 STRING,
-	lat_country FLOAT64,
-	lng_country FLOAT64,	
+	country_lat FLOAT64,
+	country_lng FLOAT64,
+	country_gdp_usd NUMERIC,
+	country_landarea_sq_kms NUMERIC,
+	country_population INT64,
+	country_incomegroup STRING,
+	country_region STRING,					
 	state_province STRING,
-	capital STRING,
-	city_population INT64
+	capital STRING
 )
 CLUSTER BY
-	country, state_province, city;
+	country_region, country, state_province, city;
 
 CREATE OR REPLACE TABLE abar_bq_dataset_covid19_dw_bi.date_dim
 (
