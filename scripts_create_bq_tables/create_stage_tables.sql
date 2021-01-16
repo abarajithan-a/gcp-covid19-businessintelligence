@@ -50,3 +50,40 @@ CREATE OR REPLACE TABLE abar_bq_dataset_covid19_raw.countries_lat_long_raw
 )
 CLUSTER BY
 	country;
+
+CREATE OR REPLACE TABLE abar_bq_dataset_covid19_raw.countries_gdp_raw
+(
+	country_name STRING,
+	country_code STRING,
+	gdp_usd STRING
+)
+CLUSTER BY
+	country_code;
+
+CREATE OR REPLACE TABLE abar_bq_dataset_covid19_raw.countries_landarea_raw
+(
+	country_name STRING,
+	country_code STRING,
+	landarea_sq_kms STRING
+)
+CLUSTER BY
+	country_code;
+
+CREATE OR REPLACE TABLE abar_bq_dataset_covid19_raw.countries_population_raw
+(
+	country_name STRING,
+	country_code STRING,
+	total_population STRING
+)
+CLUSTER BY
+	country_code;
+
+CREATE OR REPLACE TABLE abar_bq_dataset_covid19_raw.countries_incomegroup_raw
+(
+	country_code STRING,
+	region STRING,	
+	income_group STRING,
+	country_name STRING	
+)
+CLUSTER BY
+	country_code;
