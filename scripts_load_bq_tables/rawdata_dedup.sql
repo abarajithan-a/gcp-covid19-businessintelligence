@@ -63,18 +63,18 @@ FROM
 		rd.state,
 		rd.country,
 		rd.last_updated,
-		CAST(rd.lat AS FLOAT64) AS lat,
-		CAST(rd.long AS FLOAT64) AS long,
+		SAFE_CAST(rd.lat AS FLOAT64) AS lat,
+		SAFE_CAST(rd.long AS FLOAT64) AS long,
 		ST_GEOGPOINT(
-			CAST(rd.long AS FLOAT64), CAST(rd.lat AS FLOAT64)
+			SAFE_CAST(rd.long AS FLOAT64), SAFE_CAST(rd.lat AS FLOAT64)
 		) AS geo_point,
-		CAST(CAST(rd.confirmed_cases AS NUMERIC) AS INT64) AS confirmed_cases,
-		CAST(CAST(rd.deaths AS NUMERIC) AS INT64) AS deaths,
-		CAST(CAST(rd.recovered_cases AS NUMERIC) AS INT64) AS recovered_cases,
-		CAST(CAST(rd.active_cases AS NUMERIC) AS INT64) AS active_cases,
+		SAFE_CAST(SAFE_CAST(rd.confirmed_cases AS NUMERIC) AS INT64) AS confirmed_cases,
+		SAFE_CAST(SAFE_CAST(rd.deaths AS NUMERIC) AS INT64) AS deaths,
+		SAFE_CAST(SAFE_CAST(rd.recovered_cases AS NUMERIC) AS INT64) AS recovered_cases,
+		SAFE_CAST(SAFE_CAST(rd.active_cases AS NUMERIC) AS INT64) AS active_cases,
 		rd.combined_key,
-		CAST(rd.incident_rate AS NUMERIC) AS incident_rate,
-		CAST(rd.case_fatality_ratio AS NUMERIC) AS case_fatality_ratio,
+		SAFE_CAST(rd.incident_rate AS NUMERIC) AS incident_rate,
+		SAFE_CAST(rd.case_fatality_ratio AS NUMERIC) AS case_fatality_ratio,
 		rd.ingestion_timestamp,
 		rd.file_name
 	FROM abar_bq_dataset_covid19_raw.daily_ingest_covid19_raw rd) sub
