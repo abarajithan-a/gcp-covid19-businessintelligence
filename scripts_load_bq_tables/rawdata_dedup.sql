@@ -55,13 +55,19 @@ FROM
 			IFNULL(rd.fips,'UNKNOWN') ||		
 			IFNULL(rd.city,'UNKNOWN') ||
 			IFNULL(rd.state,'UNKNOWN') ||
-			IFNULL(rd.country,'UNKNOWN') ||
+			IFNULL(CASE WHEN UPPER(TRIM(rd.country)) = 'US'
+			 			THEN 'United States'
+			 			ELSE rd.country END
+				,'UNKNOWN') ||
 			rd.last_updated
 		) AS fingerprint,
 		rd.fips,
 		rd.city,
 		rd.state,
-		rd.country,
+		CASE WHEN UPPER(TRIM(rd.country)) = 'US'
+			 THEN 'United States'
+			 ELSE rd.country
+		END AS country,
 		rd.last_updated,
 		SAFE_CAST(rd.lat AS FLOAT64) AS lat,
 		SAFE_CAST(rd.long AS FLOAT64) AS long,
