@@ -140,21 +140,6 @@ FROM
 	) sub
 ;
 
--- Temporary table to store only new fingerprints and changed fingerprints
-CREATE TEMPORARY TABLE _SESSION.new_fingerprints
-(
-	fingerprint INT64 NOT NULL
-);
-
-INSERT INTO _SESSION.new_fingerprints
-SELECT 
-	rd.fingerprint
-FROM _SESSION.rawdata_dedup rd
-LEFT JOIN abar_bq_dataset_covid19_raw.daily_covid19_rawdata_deduped dcrd
-	ON rd.fingerprint = dcrd.fingerprint
-WHERE rd.fingerprint_rank = 1 AND 
-	(dcrd.fingerprint IS NULL OR rd.ingestion_timestamp <> dcrd.ingestion_timestamp);	 
-
 -- Delete the old fingerprints
 DELETE FROM abar_bq_dataset_covid19_raw.daily_covid19_rawdata_deduped
 WHERE fingerprint IN (SELECT fingerprint FROM _SESSION.rawdata_dedup);
