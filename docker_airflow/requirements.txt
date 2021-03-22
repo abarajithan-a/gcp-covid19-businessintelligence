@@ -1,0 +1,11 @@
+httplib2
+google-api
+google-api-core
+google-api-python-client
+requests
+google-cloud
+google-cloud-storage
+google-cloud-bigquery
+google-api-python-client
+pandas
+pandas-gbq
