@@ -1,9 +1,9 @@
 ## COVID19 Worldwide - Snapshot
 
-This Google Data Studio report shows the dashboard view of all the COVID19 KPI's as of 2 days ago.
+This Looker Studio report shows the dashboard view of all the COVID19 KPI's as of December 7, 2021.
 
 *Report Link:*  
-[https://datastudio.google.com/s/vfBK4vbpKGQ](https://datastudio.google.com/s/vfBK4vbpKGQ)  
+[https://lookerstudio.google.com/reporting/03bd3a9f-978c-4622-a5b9-6a6dde9ad602/page/SUhzB?s=vfBK4vbpKGQ](https://lookerstudio.google.com/reporting/03bd3a9f-978c-4622-a5b9-6a6dde9ad602/page/SUhzB?s=vfBK4vbpKGQ)  
 
 ![](../images/COVID19_Worldwide_Todays_Snapshot.jpg)
 

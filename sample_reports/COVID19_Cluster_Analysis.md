@@ -1,9 +1,9 @@
 ## COVID19 Clusters - New Cases
 
-This Google Data Studio report shows the COVID19 new cases metric for various cluster size/dimensions.
+This Looker Studio report shows the COVID19 new cases metric for various cluster size/dimensions as of December 7,2021.
 
 *Report Link:*  
-[https://datastudio.google.com/s/hMDBUrvUIwQ](https://datastudio.google.com/s/hMDBUrvUIwQ)  
+[https://lookerstudio.google.com/reporting/30781a77-8622-43ea-a170-486de84f161b/page/PnK0B?s=hMDBUrvUIwQ](https://lookerstudio.google.com/reporting/30781a77-8622-43ea-a170-486de84f161b/page/PnK0B?s=hMDBUrvUIwQ)  
 
 ![](../images/COVID19_Cluster_Analysis.png)
 

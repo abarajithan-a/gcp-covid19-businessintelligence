@@ -3,7 +3,7 @@
 This bar chart race timeline report is designed using the publicly available cloud based flourish.studio. The dataset in consideration is from April 2020 to January 2021. 
 
 *Report Link:*  
-[https://preview.flourish.studio/5097155/egd9_KT_P6El2aJMBvA3qHwxc6Zr2Um2-P0oOrLQ2LcJRGIxAdR7qSqIrD8qGa0h/](https://preview.flourish.studio/5097155/egd9_KT_P6El2aJMBvA3qHwxc6Zr2Um2-P0oOrLQ2LcJRGIxAdR7qSqIrD8qGa0h/)  
+[https://flourish-user-preview.com/5097155/egd9_KT_P6El2aJMBvA3qHwxc6Zr2Um2-P0oOrLQ2LcJRGIxAdR7qSqIrD8qGa0h/](https://flourish-user-preview.com/5097155/egd9_KT_P6El2aJMBvA3qHwxc6Zr2Um2-P0oOrLQ2LcJRGIxAdR7qSqIrD8qGa0h/)  
 
 ![](../images/covid19_cases_race_timeline.gif)
 
