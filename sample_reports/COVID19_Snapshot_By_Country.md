@@ -1,9 +1,9 @@
 ## COVID19 snapshot - By Country
 
-This Google Data Studio report shows the tabular view of all the COVID19 KPI's by country as of 2 days ago.
+This Looker Studio report shows the tabular view of all the COVID19 KPI's by country as of December 7,2021.
 
 *Report Link:*  
-[https://datastudio.google.com/s/jPIVvvqrYdY](https://datastudio.google.com/s/jPIVvvqrYdY)  
+[https://lookerstudio.google.com/reporting/1908f25f-09f5-474a-bd0e-6214acbf06df/page/SHKzB?s=jPIVvvqrYdY](https://lookerstudio.google.com/reporting/1908f25f-09f5-474a-bd0e-6214acbf06df/page/SHKzB?s=jPIVvvqrYdY)  
 
 ![](../images/Todays_COVID19_Snapshot_By_Country.png)
 
